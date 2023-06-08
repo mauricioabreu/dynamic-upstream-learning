@@ -3,3 +3,6 @@ run:
 
 stop:
     docker compose down
+
+reload:
+    docker compose exec origin openresty -s reload
