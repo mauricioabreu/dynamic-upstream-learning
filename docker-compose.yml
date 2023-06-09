@@ -10,6 +10,6 @@ services:
   api:
     build: api
     volumes:
-      - "./api/upstreams.json:/code/upstreams.json"
+      - "./api:/code"
     ports:
       - "8081:8081"
