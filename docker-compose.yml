@@ -5,6 +5,8 @@ services:
       - "./origin/http.conf:/usr/local/openresty/nginx/conf/nginx.conf"
     ports:
       - "8080:8080"
+    depends_on:
+      - api
   api:
     build: api
     ports:
