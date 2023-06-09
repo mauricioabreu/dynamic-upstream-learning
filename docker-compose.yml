@@ -9,5 +9,7 @@ services:
       - api
   api:
     build: api
+    volumes:
+      - "./api/upstreams.json:/code/upstreams.json"
     ports:
       - "8081:8081"
