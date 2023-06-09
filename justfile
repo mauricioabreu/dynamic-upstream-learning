@@ -6,3 +6,6 @@ stop:
 
 reload:
     docker compose exec origin openresty -s reload
+
+rebuild:
+    docker compose build
