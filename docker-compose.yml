@@ -1,7 +1,7 @@
 services:
   origin:
-    build: .
+    build: origin
     volumes:
-      - "./http.conf:/usr/local/openresty/nginx/conf/nginx.conf"
+      - "./origin/http.conf:/usr/local/openresty/nginx/conf/nginx.conf"
     ports:
       - "8080:80"
