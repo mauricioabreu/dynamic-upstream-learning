@@ -33,3 +33,20 @@ sequenceDiagram
     Server2->>NGINX: Success Response
     NGINX->>User: Forward Success Response
 ```
+
+## Running
+
+Dependencies:
+
+* [just](https://github.com/casey/just)
+* [docker compose](https://docs.docker.com/compose/)
+
+```
+$ just -l
+
+Available recipes:
+    rebuild # Rebuild all containers
+    reload  # Reload NGINX
+    run     # Start origin and upstreams API
+    stop    # Stop origin and upstreams API
+```
