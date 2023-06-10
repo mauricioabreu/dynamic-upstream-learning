@@ -41,7 +41,7 @@ Dependencies:
 * [just](https://github.com/casey/just)
 * [docker compose](https://docs.docker.com/compose/)
 
-```
+```console
 $ just -l
 
 Available recipes:
@@ -50,3 +50,23 @@ Available recipes:
     run     # Start origin and upstreams API
     stop    # Stop origin and upstreams API
 ```
+
+```console
+$ just run
+```
+
+Now you have NGINX running on 8080 and upstreams API on 8081.
+
+Go ahead and make a request for an existing upstream:
+
+```
+curl -v http://localhost:8080/upstream1/foo
+```
+
+Then for an upstream that does not exist:
+
+```
+curl -v http://localhost:8080/upstream2/foo
+```
+
+Compare the logs and the HTTP responses.
